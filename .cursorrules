@@ -1,13 +1,14 @@
 # OKDR Review Site
 
-Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rensei-Kai) + Authentic Ancient Arts website redesign. Two self-contained HTML files deployed to DigitalOcean App Platform via GitHub. This is a stakeholder review site — not the production Flask app.
+Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rensei-Kai) + Authentic Ancient Arts website redesign. Three self-contained HTML files deployed to DigitalOcean App Platform via GitHub. This is a stakeholder review site — not the production Flask app.
 
 ## Files
 
 - `index.html` — OKDR home page (kobudo HQ framing, AAA dojo as honbu)
 - `karate.html` — Shorin-Ryu Shorinkan karate detail page
-- Both pages cross-link via nav, breadcrumb, and footer
-- The OKDR crest is embedded as a base64 data URI in each file (~200KB each — intentional, keeps files portable)
+- `kobudo.html` — Matayoshi kobudo detail page (the organization's primary art)
+- All three pages cross-link via nav, breadcrumb, and footer
+- The OKDR crest is embedded as a base64 data URI in each file (~200–280KB each — intentional, keeps files portable)
 
 ## Hard constraints
 
@@ -18,24 +19,32 @@ Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rense
 - Do not extend this toward the production Flask/Jinja2 app — that comes later.
 - Python only for any scripting or tooling (per user's stack preference).
 
+## Key facts (verify before editing related content)
+
+- OKDR founded January 2002 by Gakiya Yoshiaki Sensei
+- Kobudo lineage: Matayoshi Shinpo (d. 1997) → Gakiya Yoshiaki → Neil Stolsmark (President since 2011)
+- Hanshi Stolsmark: 9th Dan Kobudo, 8th Dan Karate
+- Karate lineage: Chibana → Shugoro Nakazato → Minoru Nakazato → Stolsmark
+- Honbu = Authentic Ancient Arts, 369 W Main St, Waukesha, WI 53186
+
 ## Design and content conventions
 
 - Preserve gold (kobudo) / red (karate) color coding throughout.
-- When editing content, update placeholder member dojo data only when the user provides real info.
-- After any filename or link change, verify cross-page links still work (`index.html` ↔ `karate.html`).
-- Link targets use `index.html`, `karate.html`, and anchor hashes (e.g. `index.html#honbu`) — not old names like `OKDR-mockup.html`.
+- After any filename or link change, verify cross-page links still work (`index.html` ↔ `karate.html` ↔ `kobudo.html`).
+- Link targets use `index.html`, `karate.html`, `kobudo.html`, and anchor hashes (e.g. `index.html#honbu`) — not old names like `OKDR-mockup.html`.
+- Honor Gakiya Sensei in any kobudo content.
 
 ## Deployment
 
 - Push to `main` on GitHub; DO App Platform auto-deploys as a static site (~30s).
 - No build command. Output directory is `/`. Index document is `index.html`.
 
-## Pending placeholders (need real data from Sensei)
+## Pending content questions for Sensei
 
-- Member dojos: Chicago "Midwest Karate Academy" and Naha "Naha Dojo Affiliate" are placeholders. AAA (Waukesha) and Eastwind (Canada) are real.
-- Karate page curriculum: kata names are canonical Shorinkan progression — verify with Sensei.
-- Class schedule: placeholder times — get the real schedule.
-- Open question: Should a parallel Kobudo detail page be built (matching karate.html depth)?
+- Karate kata curriculum on karate.html — verify the kata list matches Shorinkan progression
+- Class schedule placeholders need real times
+- Madison Shibu (Don & Theresa Wideman) — should be added to the home page member dojos section?
+- Affiliated dojos — the 4 shown are a curated selection; Sensei may want a different mix featured
 
 ## When making edits
 

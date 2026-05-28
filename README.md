@@ -1,21 +1,21 @@
 # OKDR Review Site
 
-Static review mockups for the proposed unified OKDR + Authentic Ancient Arts website.
-Deployed via DO App Platform for stakeholder feedback.
+Static mockups of the proposed unified OKDR + AAA website. Hosted on DO App Platform for stakeholder review.
 
 ## Pages
 
 - `/` — OKDR home (kobudo HQ framing, AAA as honbu dojo)
-- `/karate.html` — Shorin-Ryu Shorinkan karate detail page
+- `/karate.html` — Shorin-Ryu Shorinkan karate page (Chibana / Nakazato lineage)
+- `/kobudo.html` — Matayoshi kobudo page (Gakiya / OKDR lineage)
 
-## Updating content
+## Updating
 
-Edit HTML directly. Commit and push to `main`. DO App Platform auto-deploys in ~30s.
+Edit HTML, commit, push to main. DO auto-deploys in ~30 seconds.
 
 ## Stack
 
-- Plain static HTML (intentional)
-- Crest embedded as base64 (intentional — keeps files portable)
+- Static HTML (intentional)
+- Crest embedded as base64 (intentional)
 - No build step
 
-For the future production build, see HANDOFF docs elsewhere — Flask + Jinja2 on DO App Platform.
+Future production build will be Flask + Jinja2 on DO App Platform — separate effort.
