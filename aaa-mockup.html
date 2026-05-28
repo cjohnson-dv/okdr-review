@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Authentic Ancient Arts — Traditional Karate & Kobudo in Waukesha, WI</title>
+<meta name="description" content="Forty years of traditional Shorin-Ryu Shorinkan karate and Okinawan kobudo in Waukesha, Wisconsin. Train under Hanshi Neil Stolsmark. Free trial class available.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --bg-2: #141414;
+  --bg-3: #1c1c1c;
+  --red: #c8102e;
+  --red-dark: #a00d24;
+  --text: #e8e6e1;
+  --text-muted: #b8b6b1;
+  --text-dim: #888;
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.18);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+}
+.nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.crest {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+  color: var(--red);
+  font-size: 18px;
+}
+.brand-name {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.nav-links a:hover { color: var(--red); transition: color 0.2s; }
+.cta-btn {
+  background: var(--red);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cta-btn:hover { background: var(--red-dark); }
+.mobile-toggle { display: none; background: none; border: none; color: var(--text); cursor: pointer; font-size: 24px; }
+
+/* Hero */
+.hero {
+  padding: 100px 32px 80px;
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.7) 0%, var(--bg) 100%),
+    radial-gradient(ellipse at top right, rgba(200,16,46,0.18) 0%, transparent 60%);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 600;
+  line-height: 1.05;
+  max-width: 640px;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+.hero p {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 540px;
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn-primary, .btn-secondary {
+  padding: 15px 26px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+  border: none;
+}
+.btn-primary { background: var(--red); color: #fff; }
+.btn-primary:hover { background: var(--red-dark); }
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 0.5px solid var(--border-strong);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.06); }
+
+/* Programs */
+.programs {
+  background: var(--bg-2);
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+}
+.programs-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.program {
+  padding: 56px 36px;
+  border-right: 0.5px solid var(--border);
+  transition: background 0.2s;
+}
+.program:last-child { border-right: none; }
+.program:hover { background: var(--bg-3); }
+.program-tag {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.program h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.program p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.program-link {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* Lineage */
+.lineage {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 88px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.lineage h2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+.lineage p { color: var(--text-muted); font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
+.stats { display: flex; gap: 36px; margin-top: 32px; }
+.stat-num { font-size: 32px; font-weight: 600; color: var(--red); }
+.stat-label { font-size: 11px; color: var(--text-dim); letter-spacing: 0.12em; font-weight: 600; }
+.quote-card {
+  background: var(--bg-2);
+  border: 0.5px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+  padding: 36px;
+  font-family: 'Noto Serif JP', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #d4d2cd;
+  font-style: italic;
+}
+.quote-attr {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* Schedule */
+.schedule {
+  background: var(--bg-2);
+  border-top: 0.5px solid var(--border);
+  padding: 72px 32px;
+}
+.schedule-inner { max-width: 1280px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 36px;
+  letter-spacing: -0.02em;
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.day-card {
+  background: var(--bg);
+  padding: 22px 18px;
+  border-radius: 6px;
+  border: 0.5px solid var(--border);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.day-card:hover { border-color: var(--red); transform: translateY(-2px); }
+.day-name { font-size: 11px; color: var(--text-dim); letter-spacing: 0.16em; font-weight: 600; }
+.day-class { font-size: 15px; font-weight: 600; margin-top: 10px; }
+.day-time { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+/* News */
+.news {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+.news-card {
+  background: var(--bg-2);
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  padding: 28px;
+  transition: border-color 0.2s;
+}
+.news-card:hover { border-color: var(--border-strong); }
+.news-date { font-size: 11px; color: var(--red); letter-spacing: 0.12em; font-weight: 600; margin-bottom: 12px; }
+.news-card h4 { font-size: 17px; font-weight: 600; margin-bottom: 10px; line-height: 1.3; }
+.news-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+/* CTA */
+.cta-band {
+  background: var(--red);
+  padding: 64px 32px;
+  text-align: center;
+}
+.cta-band h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.cta-band p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 28px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-band .btn-primary {
+  background: #0a0a0a;
+  color: #fff;
+}
+.cta-band .btn-primary:hover { background: #000; }
+
+/* Footer */
+footer {
+  background: #000;
+  padding: 56px 32px 32px;
+  border-top: 0.5px solid var(--border);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-col h5 {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+.footer-col a:hover { color: var(--red); }
+.footer-bottom {
+  max-width: 1280px;
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 0.5px solid var(--border);
+  font-size: 12px;
+  color: var(--text-dim);
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.06em;
+}
+.footer-brand-text { font-size: 13px; color: var(--text-muted); margin-top: 12px; line-height: 1.6; max-width: 320px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .mobile-toggle { display: block; }
+  .programs-grid { grid-template-columns: 1fr; }
+  .program { border-right: none; border-bottom: 0.5px solid var(--border); }
+  .lineage { grid-template-columns: 1fr; gap: 40px; padding: 56px 24px; }
+  .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+  .news-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .hero { padding: 60px 24px 56px; }
+  .nav { padding: 16px 20px; }
+  .footer-bottom { flex-direction: column; gap: 12px; }
+}
+@media (max-width: 500px) {
+  .schedule-grid { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .stats { gap: 24px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="/" class="brand">
+      <div class="crest">空</div>
+      <div class="brand-name">AUTHENTIC ANCIENT ARTS</div>
+    </a>
+    <nav class="nav-links">
+      <a href="#programs">Programs</a>
+      <a href="#lineage">Lineage</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="cta-btn">FREE TRIAL CLASS</a>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">SHORIN-RYU SHORINKAN · WAUKESHA, WI</div>
+  <h1>Forty years of traditional karate &amp; kobudo.</h1>
+  <p>Train Okinawan Shorin-Ryu karate and traditional weapons under Hanshi Neil Stolsmark. Authentic lineage, a multi-generational community, every age and rank welcome.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">START YOUR FREE WEEK</a>
+    <a href="#schedule" class="btn-secondary">VIEW SCHEDULE</a>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="programs-grid">
+    <div class="program">
+      <div class="program-tag">JUNIORS · AGES 6–12</div>
+      <h3>Little Dragons &amp; Juniors</h3>
+      <p>Focus, respect, and physical confidence through age-appropriate Shorin-Ryu fundamentals. Builds discipline that carries into school and home.</p>
+      <div class="program-link">EXPLORE PROGRAM →</div>
+    </div>
+    <div class="program">
+      <div class="program-tag">ADULTS · ALL LEVELS</div>
+      <h3>Karate &amp; Kobudo</h3>
+      <p>Traditional kata, kumite, and Okinawan weapons (bo, sai, tonfa, nunchaku) from white belt through advanced Dan ranks. No experience required.</p>
+      <div class="program-link">EXPLORE PROGRAM →</div>
+    </div>
+    <div class="program">
+      <div class="program-tag">ADVANCED</div>
+      <h3>Black Belt Society</h3>
+      <p>Deeper study of bunkai, kobudo, and teaching methodology. Includes the annual Warrior Gasshuku and instructor development track.</p>
+      <div class="program-link">EXPLORE PROGRAM →</div>
+    </div>
+  </div>
+</section>
+
+<section class="lineage" id="lineage">
+  <div>
+    <div class="eyebrow">LINEAGE</div>
+    <h2>Hanshi Neil Stolsmark</h2>
+    <p>Founder of Authentic Ancient Arts and a senior member of Okinawa Kobudo Doushi Rensei-Kai. Direct lineage from Okinawa, four decades of teaching, and a continuing student himself.</p>
+    <p>Our dojo carries forward the Shorin-Ryu Shorinkan tradition — not as a museum piece, but as a living practice that meets each student where they are.</p>
+    <div class="stats">
+      <div>
+        <div class="stat-num">40+</div>
+        <div class="stat-label">YEARS TEACHING</div>
+      </div>
+      <div>
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">STUDENTS TRAINED</div>
+      </div>
+      <div>
+        <div class="stat-num">9th</div>
+        <div class="stat-label">DAN RANK</div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-card">
+    "The ultimate aim of the art of karate lies not in victory or defeat, but in the perfection of the character of its participants."
+    <div class="quote-attr">— GICHIN FUNAKOSHI</div>
+  </div>
+</section>
+
+<section class="schedule" id="schedule">
+  <div class="schedule-inner">
+    <div class="section-eyebrow">THIS WEEK AT THE DOJO</div>
+    <h2 class="section-title">Class schedule</h2>
+    <div class="schedule-grid">
+      <div class="day-card">
+        <div class="day-name">MONDAY</div>
+        <div class="day-class">Juniors</div>
+        <div class="day-time">5:30 PM</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">TUESDAY</div>
+        <div class="day-class">Adults</div>
+        <div class="day-time">7:00 PM</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">WEDNESDAY</div>
+        <div class="day-class">Kobudo</div>
+        <div class="day-time">6:30 PM</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">THURSDAY</div>
+        <div class="day-class">All ranks</div>
+        <div class="day-time">6:00 PM</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">SATURDAY</div>
+        <div class="day-class">Open mat</div>
+        <div class="day-time">9:00 AM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="news">
+  <div class="section-eyebrow">DOJO NEWS</div>
+  <h2 class="section-title">What's happening</h2>
+  <div class="news-grid">
+    <article class="news-card">
+      <div class="news-date">DEC 04, 2025</div>
+      <h4>December BIG THURSDAY</h4>
+      <p>Catch up on dues and programs for 2026. The full dojo gathers for our monthly community training.</p>
+    </article>
+    <article class="news-card">
+      <div class="news-date">DEC 07, 2025</div>
+      <h4>Waukesha Christmas Parade</h4>
+      <p>Dojo open 3 PM until finish. Bring lawn chairs, blankets, and a dish to pass. No Main Street parking after 2 PM.</p>
+    </article>
+    <article class="news-card">
+      <div class="news-date">DEC 20, 2025</div>
+      <h4>Christmas Party Potluck</h4>
+      <p>Annual dojo holiday celebration. Sign-up sheet posted in the dojo. Hope to see everyone there.</p>
+    </article>
+  </div>
+</section>
+
+<section class="cta-band" id="contact">
+  <h2>Your first week is on us.</h2>
+  <p>No contracts, no pressure. Visit the dojo, meet the community, and find out if traditional karate is right for you.</p>
+  <a href="tel:2625444280" class="btn-primary">CALL (262) 544-4280</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="brand">
+        <div class="crest">空</div>
+        <div class="brand-name">AUTHENTIC ANCIENT ARTS</div>
+      </div>
+      <p class="footer-brand-text">Traditional Shorin-Ryu Shorinkan karate and Okinawan kobudo in Waukesha, Wisconsin since 1986.</p>
+    </div>
+    <div class="footer-col">
+      <h5>VISIT</h5>
+      <ul>
+        <li>369 W Main St</li>
+        <li>Waukesha, WI 53186</li>
+        <li><a href="tel:2625444280">(262) 544-4280</a></li>
+        <li><a href="mailto:info@authenticancientarts.com">info@authenticancientarts.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>PROGRAMS</h5>
+      <ul>
+        <li><a href="#programs">Juniors</a></li>
+        <li><a href="#programs">Adults</a></li>
+        <li><a href="#programs">Kobudo</a></li>
+        <li><a href="#programs">Black Belt Society</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>CONNECT</h5>
+      <ul>
+        <li><a href="https://www.facebook.com/pages/Authentic-Ancient-Arts-Karate-and-Kobudo-Studios/299801218066">Facebook</a></li>
+        <li><a href="http://www.youtube.com/user/aaaauthenticarts">YouTube</a></li>
+        <li><a href="http://www.okdr.org">OKDR.org</a></li>
+        <li><a href="http://video.okdr.org">OKDR Video Library</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 AUTHENTIC ANCIENT ARTS · ALL RIGHTS RESERVED</div>
+    <div>WAUKESHA, WISCONSIN</div>
+  </div>
+</footer>
+
+</body>
+</html>
