@@ -427,6 +427,8 @@ header {
   transition: background 0.2s;
 }
 .event-row:hover { background: var(--bg-3); }
+a.event-row { text-decoration: none; color: inherit; cursor: pointer; }
+a.event-row:hover .event-info h4 { color: var(--gold); }
 .event-date {
   text-align: center;
   padding-right: 32px;
@@ -870,17 +872,17 @@ footer { background: #000; padding: 72px 32px 32px; border-top: 0.5px solid var(
     <h2 class="section-title">Gasshuku, seminars & community.</h2>
 
     <div class="events-list">
-      <div class="event-row">
+      <a href="2026-gasshuku.pdf" class="event-row" download="2026-warrior-gasshuku.pdf">
         <div class="event-date">
           <div class="event-month">JUN</div>
           <div class="event-day">15</div>
         </div>
         <div class="event-info">
           <h4>Warrior Gasshuku 2026</h4>
-          <p>Hanshi Stolsmark's annual signature event · Open to OKDR members worldwide and Shorinkan karateka</p>
+          <p>Hanshi Stolsmark's annual signature event · Open to OKDR members worldwide and Shorinkan karateka · <span style="color: var(--gold);">Download event flyer ↓</span></p>
         </div>
         <div class="event-type global">WORLDWIDE</div>
-      </div>
+      </a>
       <div class="event-row">
         <div class="event-date">
           <div class="event-month">OCT</div>
@@ -894,12 +896,12 @@ footer { background: #000; padding: 72px 32px 32px; border-top: 0.5px solid var(
       </div>
       <div class="event-row">
         <div class="event-date">
-          <div class="event-month">DEC</div>
-          <div class="event-day">04</div>
+          <div class="event-month">1ST</div>
+          <div class="event-day" style="font-size: 22px; letter-spacing: 0.04em;">THU</div>
         </div>
         <div class="event-info">
-          <h4>December BIG THURSDAY</h4>
-          <p>Honbu Dojo · Monthly community gathering and program planning</p>
+          <h4>BIG THURSDAY</h4>
+          <p>Honbu Dojo · First Thursday of every month · Community gathering and program planning</p>
         </div>
         <div class="event-type local">HONBU</div>
       </div>
