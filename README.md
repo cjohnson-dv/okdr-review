@@ -16,7 +16,7 @@ Edit HTML, commit, push to main. DO auto-deploys in ~30 seconds.
 ## Stack
 
 - Static HTML (intentional)
-- Crest embedded as base64 (intentional)
+- Crest: `okdr-black-bg.png` (shared asset)
 - No build step
 
 Future production build will be Flask + Jinja2 on DO App Platform — separate effort.

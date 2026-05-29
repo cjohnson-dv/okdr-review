@@ -9,7 +9,7 @@ Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rense
 - `kobudo.html` — Matayoshi kobudo detail page (the organization's primary art)
 - `dojos.html` — full worldwide member dojo directory (from okdr.org/affiliates)
 - All pages cross-link via nav, breadcrumb, and footer
-- The OKDR crest is embedded as a base64 data URI in each file (~200–280KB each — intentional, keeps files portable)
+- The OKDR crest uses `okdr-black-bg.png` (black background, gold emblem) — referenced from all pages
 
 ## Hard constraints
 
