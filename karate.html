@@ -473,6 +473,66 @@ header {
 }
 .cta-band .btn-primary:hover { background: #000; }
 
+
+/* === SCHEDULE MODAL === */
+.schedule-modal {
+  position: fixed; inset: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+}
+.schedule-modal.open { opacity: 1; visibility: visible; }
+.schedule-modal-dialog {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: var(--bg-2);
+  border: 0.5px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 32px 28px 28px;
+}
+.schedule-modal-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  border: 0.5px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 20px; cursor: pointer; line-height: 1;
+  transition: border-color 0.2s, color 0.2s;
+}
+.schedule-modal-close:hover { border-color: var(--gold); color: var(--gold); }
+.schedule-modal-eyebrow {
+  font-size: 10px; letter-spacing: 0.28em; color: var(--gold);
+  font-weight: 600; margin-bottom: 10px;
+}
+.schedule-modal h2 {
+  font-size: 24px; font-weight: 600;
+  margin-bottom: 8px; letter-spacing: -0.02em;
+  padding-right: 40px;
+}
+.schedule-modal-intro {
+  font-size: 14px; color: var(--text-muted);
+  margin-bottom: 20px; line-height: 1.6;
+}
+.schedule-modal img {
+  width: 100%; border-radius: 8px;
+  border: 0.5px solid var(--border);
+  margin-bottom: 16px;
+}
+.schedule-modal-download {
+  display: inline-block;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; color: var(--gold);
+}
+.schedule-modal-download:hover { text-decoration: underline; }
+body.modal-open { overflow: hidden; }
+
 /* === FOOTER === */
 footer { background: #000; padding: 72px 32px 32px; border-top: 0.5px solid var(--border); }
 .footer-inner {
@@ -1030,7 +1090,7 @@ footer { background: #000; padding: 72px 32px 32px; border-top: 0.5px solid var(
       <h5>HONBU DOJO</h5>
       <ul>
         <li><a href="#">Authentic Ancient Arts</a></li>
-        <li><a href="#">Class Schedule</a></li>
+        <li><a href="#" data-schedule-open>Class Schedule</a></li>
         <li><a href="#">Free Trial</a></li>
         <li><a href="#">Programs</a></li>
       </ul>
@@ -1059,6 +1119,44 @@ footer { background: #000; padding: 72px 32px 32px; border-top: 0.5px solid var(
     <div>WAUKESHA · WORLDWIDE</div>
   </div>
 </footer>
+
+
+<div class="schedule-modal" id="schedule-modal" role="dialog" aria-modal="true" aria-labelledby="schedule-modal-title" aria-hidden="true">
+  <div class="schedule-modal-dialog">
+    <button type="button" class="schedule-modal-close" data-schedule-close aria-label="Close schedule">&times;</button>
+    <div class="schedule-modal-eyebrow">HONBU DOJO · WAUKESHA</div>
+    <h2 id="schedule-modal-title">Waukesha Adult Schedule</h2>
+    <p class="schedule-modal-intro">Authentic Ancient Arts class times at 369 W Main St. Source: <a href="https://www.authenticancientarts.com/?page_id=2677" style="color: var(--gold);" target="_blank" rel="noopener noreferrer">authenticancientarts.com</a></p>
+    <img src="waukesha-adult-schedule.png" alt="Waukesha adult karate and kobudo class schedule at Authentic Ancient Arts">
+    <a href="waukesha-adult-schedule.pdf" class="schedule-modal-download" download="Waukesha-Adult-Schedule.pdf">DOWNLOAD PDF ↓</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  var modal = document.getElementById('schedule-modal');
+  if (!modal) return;
+  var openers = document.querySelectorAll('[data-schedule-open]');
+  var closer = modal.querySelector('[data-schedule-close]');
+  function openModal(e) {
+    if (e) e.preventDefault();
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+  openers.forEach(function (el) { el.addEventListener('click', openModal); });
+  if (closer) closer.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+})();
+</script>
 
 </body>
 </html>
