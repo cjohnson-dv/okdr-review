@@ -7,7 +7,8 @@ Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rense
 - `index.html` — OKDR home page (kobudo HQ framing, AAA dojo as honbu)
 - `karate.html` — Shorin-Ryu Shorinkan karate detail page
 - `kobudo.html` — Matayoshi kobudo detail page (the organization's primary art)
-- All three pages cross-link via nav, breadcrumb, and footer
+- `dojos.html` — full worldwide member dojo directory (from okdr.org/affiliates)
+- All pages cross-link via nav, breadcrumb, and footer
 - The OKDR crest is embedded as a base64 data URI in each file (~200–280KB each — intentional, keeps files portable)
 
 ## Hard constraints
@@ -30,8 +31,8 @@ Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rense
 ## Design and content conventions
 
 - Preserve gold (kobudo) / red (karate) color coding throughout.
-- After any filename or link change, verify cross-page links still work (`index.html` ↔ `karate.html` ↔ `kobudo.html`).
-- Link targets use `index.html`, `karate.html`, `kobudo.html`, and anchor hashes (e.g. `index.html#honbu`) — not old names like `OKDR-mockup.html`.
+- After any filename or link change, verify cross-page links still work (`index.html` ↔ `karate.html` ↔ `kobudo.html` ↔ `dojos.html`).
+- Link targets use `index.html`, `karate.html`, `kobudo.html`, `dojos.html`, and anchor hashes (e.g. `index.html#honbu`) — not old names like `OKDR-mockup.html`.
 - Honor Gakiya Sensei in any kobudo content.
 
 ## Deployment

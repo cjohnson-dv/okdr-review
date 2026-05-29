@@ -7,6 +7,7 @@ Static mockups of the proposed unified OKDR + AAA website. Hosted on DO App Plat
 - `/` — OKDR home (kobudo HQ framing, AAA as honbu dojo)
 - `/karate.html` — Shorin-Ryu Shorinkan karate page (Chibana / Nakazato lineage)
 - `/kobudo.html` — Matayoshi kobudo page (Gakiya / OKDR lineage)
+- `/dojos.html` — full worldwide member dojo directory
 
 ## Updating
 
