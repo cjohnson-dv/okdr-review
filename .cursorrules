@@ -1,15 +1,17 @@
 # OKDR Review Site
 
-Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rensei-Kai) + Authentic Ancient Arts website redesign. Three self-contained HTML files deployed to DigitalOcean App Platform via GitHub. This is a stakeholder review site — not the production Flask app.
+Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rensei-Kai) + Authentic Ancient Arts website redesign. Self-contained HTML pages deployed to DigitalOcean App Platform via GitHub. This is a stakeholder review site — not the production Flask app.
 
-## Files
+## Files (deploy only — edit these directly)
 
 - `index.html` — OKDR home page (kobudo HQ framing, AAA dojo as honbu)
 - `karate.html` — Shorin-Ryu Shorinkan karate detail page
 - `kobudo.html` — Matayoshi kobudo detail page (the organization's primary art)
 - `dojos.html` — full worldwide member dojo directory (from okdr.org/affiliates)
+- `videos.html` — featured YouTube video and OKDR subscription library CTA
+- `okdr-black-bg.png` — OKDR crest asset
+- `Shorinkan.png` — Shorinkan seal for karate hero watermark
 - All pages cross-link via nav, breadcrumb, and footer
-- The OKDR crest uses `okdr-black-bg.png` (black background, gold emblem) — referenced from all pages
 
 ## Hard constraints
 
@@ -31,8 +33,8 @@ Static review mockups for the proposed unified OKDR (Okinawa Kobudo Doushi Rense
 ## Design and content conventions
 
 - Preserve gold (kobudo) / red (karate) color coding throughout.
-- After any filename or link change, verify cross-page links still work (`index.html` ↔ `karate.html` ↔ `kobudo.html` ↔ `dojos.html`).
-- Link targets use `index.html`, `karate.html`, `kobudo.html`, `dojos.html`, and anchor hashes (e.g. `index.html#honbu`) — not old names like `OKDR-mockup.html`.
+- After any filename or link change, verify cross-page links still work across all deploy pages.
+- Link targets use `index.html`, `karate.html`, `kobudo.html`, `dojos.html`, `videos.html`, and anchor hashes (e.g. `index.html#honbu`).
 - Honor Gakiya Sensei in any kobudo content.
 
 ## Deployment
